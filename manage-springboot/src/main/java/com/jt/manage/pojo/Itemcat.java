@@ -5,9 +5,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.jt.common.po.BasePojo;
 
 @Table(name="tb_item_cat")
+@JsonIgnoreProperties(ignoreUnknown=true)
 public class Itemcat extends BasePojo{
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -58,14 +60,14 @@ public class Itemcat extends BasePojo{
 	public String getText(){
 		return name;
 	}
-	public void setText(String text){
+	/*public void setText(String text){
 		
-	}
+	}*/
 	public String getState(){
 		return isParent?"closed":"open";
 	}
-	public void setState(String state){
+	/*public void setState(String state){
 		
-	}
+	}*/
 	
 }

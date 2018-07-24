@@ -22,14 +22,11 @@ public class ItemcatController {
 	public List<Itemcat> findAllItemcat() {
 		return itemcatService.findAllItemcat();
 	}
-
 	/**
 	 * 商品分类树展示
 	 */
 	@RequestMapping("item/cat/list")
 	public List<Itemcat> findListByParentId(@RequestParam(defaultValue = "0") Long id) {
-
 		return itemcatService.findListByParentId(id);
-
 	}
 }
