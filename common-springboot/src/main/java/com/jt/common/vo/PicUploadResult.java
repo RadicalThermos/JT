@@ -5,7 +5,7 @@ public class PicUploadResult {
     private String url;             //应该是浏览器能够解析的具体页面路径  相对路径http://image.jt/1212.jpg 
     								//本地路径:存放图片路径     D:\jt-upload\images\2017\06\03
     private String width;
-    private String height;          //如果认为的不指定,则使用的是图片自己的尺寸
+    private String height;          //如果人为的不指定,则使用的是图片自己的尺寸
 
     public Integer getError() {
         return error;
