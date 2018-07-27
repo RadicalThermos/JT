@@ -66,7 +66,6 @@ public class ItemService {
 		itemMapper.updateByPrimaryKeySelective(item);
 		ItemDesc itemDesc = new ItemDesc();
 		itemDesc.setItemId(item.getId());
-		;
 		itemDesc.setItemDesc(desc);
 		itemDesc.setUpdated(item.getUpdated());
 		itemDescMapper.updateByPrimaryKeySelective(itemDesc);
@@ -107,7 +106,7 @@ public class ItemService {
 		// 创建UUID
 		String uuid = UUID.randomUUID().toString();
 		// 创建图片存放路径
-		String dateStr = new Date().toLocaleString().split(" ")[0].replace("-", "/");
+		String dateStr = new Date().toLocaleString().split(" ")[0].replaceAll("-", "/");
 		String uploadStr = "/images/" + dateStr;
 		String path = request.getServletContext().getRealPath(uploadStr);
 		if (!new File(path).exists()) {
