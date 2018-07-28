@@ -5,10 +5,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class IndexController {
+public class UserController {
 
-	@RequestMapping("/")
-	public String goHead(){
-		return "index";
+	@RequestMapping("/user/{pageName}")
+	public String register(@PathVariable String pageName){
+		return pageName;
 	}
 }

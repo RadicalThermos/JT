@@ -20,12 +20,6 @@ import org.springframework.stereotype.Service;
 
 import com.jt.common.vo.HttpResult;
 
-
-
-
-
-
-
 @Service
 public class HttpClientService {
 //	implements FactoryBean<CloseableHttpClient>, InitializingBean, DisposableBean 
